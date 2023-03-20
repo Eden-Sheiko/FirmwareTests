@@ -1,0 +1,2 @@
+../Server/Src/Spi.c:6:9:SPI_send	536	static
+../Server/Src/Spi.c:46:6:HAL_SPI_TxRxCpltCallback	16	static

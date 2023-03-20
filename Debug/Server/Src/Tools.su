@@ -1,0 +1,6 @@
+../Server/Src/Tools.c:46:6:udp_receive_callback	584	static
+../Server/Src/Tools.c:119:6:udpServer_init	16	static
+../Server/Src/Tools.c:133:5:__io_putchar	16	static
+../Server/Src/Tools.c:138:5:_write	24	static
+../Server/Src/Tools.c:144:5:__io_getchar	16	static
+../Server/Src/Tools.c:151:5:_read	40	static
