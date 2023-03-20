@@ -1,0 +1,2 @@
+../RTG/Src/i2c.c:6:6:receive_data_i2c	64	static
+../RTG/Src/i2c.c:16:6:HAL_I2C_SlaveRxCpltCallback	16	static
