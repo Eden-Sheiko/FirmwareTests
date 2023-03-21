@@ -5,7 +5,6 @@ volatile uint8_t i2c1_master_callback_success = FALSE;
 volatile uint8_t i2c2_slave_callback_success = FALSE;
 
 uint8_t I2C_send(uint8_t data_size, uint8_t *data_sent, uint8_t iteration) {
-	uint8_t buffer_send[BUFFER_SIZE];
 	uint8_t buffer_receive[BUFFER_SIZE];
 	HAL_StatusTypeDef status_1 = HAL_OK;
 	HAL_StatusTypeDef status_2 = HAL_OK;
@@ -48,8 +47,8 @@ void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c) {
 
 }
 
-void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef *hi2c) {
-	if (hi2c == I2C_MASTER)
-		i2c1_master_callback_success = TRUE;
-}
+//void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef *hi2c) {
+//	if (hi2c == I2C_MASTER)
+//		i2c1_master_callback_success = TRUE;
+//}
 

@@ -9,12 +9,10 @@
 // UART HANDLES:
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart4;
-extern UART_HandleTypeDef huart6;
 
 // UARAT AND GPIO DEFINITIONS:
 #define UART_DEBUG &huart3			//Debug UART
 #define UART_MASTER &huart4			//Transmit UART
-#define UART_SLAVE &huart6			//Receive UART
 
 // GENERAL DEFINITIONS:
 #define BUFFER_SIZE 256
