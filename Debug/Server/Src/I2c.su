@@ -1,0 +1,2 @@
+../Server/Src/I2c.c:7:9:I2C_send	280	static
+../Server/Src/I2c.c:43:6:HAL_I2C_SlaveRxCpltCallback	16	static

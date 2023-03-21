@@ -21,11 +21,10 @@
 
 // I2C HANDLES:
 extern I2C_HandleTypeDef hi2c1;
-extern I2C_HandleTypeDef hi2c2;
 
 // GENERAL DEFINITIONS:
 #define BUFFER_SIZE 256
-#define I2C_MASTER &hi2c1
+#define I2C_SLAVE &hi2c1
 #define SLAVE_ADDRESS 20
 
 // BOOLS:
