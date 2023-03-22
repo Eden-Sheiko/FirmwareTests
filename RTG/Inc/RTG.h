@@ -24,7 +24,7 @@
  */
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart4;
-extern SPI_HandleTypeDef hspi5;
+extern SPI_HandleTypeDef hspi1;
 
 extern I2C_HandleTypeDef hi2c1;
 
@@ -64,7 +64,7 @@ extern I2C_HandleTypeDef hi2c1;
 //#define I2C_MASTER &hi2c1
 //#define I2C_SLAVE &hi2c1
 #define SLAVE_ADDRESS 20
-#define SPI_MASTER &hspi5
+#define SPI_MASTER &hspi1
 /*
  * Main Program Loop
  */

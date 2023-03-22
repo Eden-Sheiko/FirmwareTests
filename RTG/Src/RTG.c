@@ -10,8 +10,8 @@
 void rtg_main() {
 	while (TRUE) {
 		//send_data_uart();
-		//receive_data_i2c();
-		send_spi_data();
+		receive_data_i2c();
+		//send_spi_data();
 	}
 }
 
