@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-#define IP_ADDRESS "192.168.220.34"
+#define IP_ADDRESS "192.168.81.34"
 #define FLAG_ZERO 0
 #define EQUAL_ZERO 0
 #define TRUE 1
