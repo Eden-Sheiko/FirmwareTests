@@ -52,9 +52,26 @@ int main()
   pthread_t spi_thread;
   //pthread_t udp_thread;
 
-  pthread_create(&uart_thread, NULL, &func_uart, NULL);
-  pthread_create(&i2c_thread, NULL, &func_i2c, NULL);
-  pthread_create(&spi_thread, NULL, &func_spi, NULL);
+  int ret1 = pthread_create(&uart_thread, NULL, &func_uart, NULL);
+  int ret2 = pthread_create(&i2c_thread, NULL, &func_i2c, NULL);
+  int ret3 = pthread_create(&spi_thread, NULL, &func_spi, NULL);
+
+
+  //error checking 
+  if (ret1 != ZERO){
+    perror("Failed to create thread_uart \n");
+  }
+
+  if (ret2 != ZERO){
+    perror("Failed to create thread_i2c \n");
+    pthread_cancel(uart_thread);
+  }
+
+  if (ret3 != ZERO){
+    perror("Failed to create thread_spi \n");
+    pthread_cancel(uart_thread);
+    pthread_cancel(i2c_thread);
+  }
 
 
 
@@ -167,7 +184,7 @@ void* func_uart(void* arg)
     // from the calling thread
     pthread_detach(pthread_self());
   
-    printf("Inside the thread\n");
+    printf("Inside the thread uart\n");
   
     // exit the current thread
     pthread_exit(NULL);
@@ -179,7 +196,7 @@ void* func_i2c(void* arg)
     // from the calling thread
     pthread_detach(pthread_self());
   
-    printf("Inside the thread\n");
+    printf("Inside the thread i2c\n");
   
     // exit the current thread
     pthread_exit(NULL);
@@ -191,7 +208,7 @@ void* func_spi(void* arg)
     // from the calling thread
     pthread_detach(pthread_self());
   
-    printf("Inside the thread\n");
+    printf("Inside the thread spi\n");
   
     // exit the current thread
     pthread_exit(NULL);
