@@ -29,16 +29,21 @@ int main() {
         return 1;
     }
 
-    // Send the buffer
-    result = write(i2c_fd, buffer, buffer_len);
+    // Send the buffer in a loop
+    while (1) {
+        result = write(i2c_fd, buffer, buffer_len);
 
-    if (result < 0) {
-        perror("Error sending I2C buffer");
-        close(i2c_fd);
-        return 1;
+        if (result < 0) {
+            perror("Error sending I2C buffer");
+            close(i2c_fd);
+            return 1;
+        }
+
+        printf("Sent buffer: %s\n", buffer);
+
+        // Delay between sending (in microseconds)
+        usleep(500000); // 500ms delay
     }
-
-    printf("Sent buffer: %s\n", buffer);
 
     close(i2c_fd);
 

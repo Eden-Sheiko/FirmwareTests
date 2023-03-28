@@ -15,7 +15,7 @@ int main()
     }
 
     // Set the I2C slave address
-    int addr = 0x10; // replace with your desired slave address
+    int addr = 50; // replace with your desired slave address
     if (ioctl(fd, I2C_SLAVE, addr) < 0) {
         perror("ioctl");
         close(fd); // Make sure to close the file descriptor before exiting
@@ -24,7 +24,7 @@ int main()
 
     // Prepare the input data to send to the slave device
     char buffer[50];
-    int len = snprintf(buffer, 50, "i am data buffer from pi4b\n");
+    int len = snprintf(buffer, 50, "i am data buffer from pi4b \n");
 
     // Write the input data to the slave device
     int write_len = write(fd, buffer, len);

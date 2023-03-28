@@ -8,7 +8,7 @@
 #include <string.h>
 
 #define SPI_DEVICE "/dev/spidev0.0"
-#define BUFFER_SIZE 32
+#define BUFFER_SIZE 50
 
 int main(int argc, char **argv) {
     int spi_fd = -1;

@@ -58,7 +58,7 @@ int main() {
 
     // Read data from UART in a loop
     while (1) {
-        char buf[100];
+        char buf[50];
         int bytes_read = read(uart_filestream, buf, sizeof(buf) - 1);
         if (bytes_read < 0) {
             printf("Failed to read from UART: %s\n", strerror(errno));
